@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --Header_color: #0b132b;
+    --Body_Color: #3a506b;
+    --main_color: rgb(224, 255, 255);
+    --hero_color: #162944;
+    --about_color: rgb(224, 255, 255);
+    --border-r: .2rem;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+}
+
+p{
+    font-size: 1.1rem;
+}
+
+body {
+
+    display: flex;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: normal;
+    background-color: var(--Body_Color);
+    flex-direction: column;
+
+} 
+
+header {
+    background-color: var(--Header_color);
+    display:flex;
+    align-items: center;
+    height: 11vh;
+    position: fixed;
+    width:100%;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    gap: 1rem;
+}
+
+header .logo {
+    
+    display: flex;
+    cursor: pointer;
+    flex: 1;
+    flex-grow: 1;
+}
+
+header .logo img {
+
+    height: 80px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+header .logo img:hover {
+
+    transform: scale(1.2);
+}
+
+header .nav_link{
+
+    display: flex;
+    flex: 2;
+    flex-grow: 2;
+}
+
+header .nav_link li{
+    
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header .nav_link li:hover{
+
+    transform: scale(1.1);
+
+}
+
+header .nav_link a {
+
+    font-size: 700;
+    color: white;
+    text-decoration: none;
+}
+
+header .nav_link li a:hover{
+
+    color: gold;
+}
+
+header .btn button{
+
+    font-weight: 500;
+    color:darkslategray;
+    padding: 5px 20px;
+    background: beige;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+header .btn button:hover{
+    
+    background-color: blanchedalmond;
+    color: darkorange;
+    transform: scale(1.1);
+}
+
+#main-header form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+  }
+
+#btn-menu {
+    background-color: transparent;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+  }
+
+  #mobile-nav {
+    position: fixed;
+    top: calc(10vh);
+    left: calc(25vw + 2rem);
+    width: calc(50vw - 2rem);
+    flex-direction: column;
+    gap: 1rem;
+    border: 2px solid var(--electric);
+    border-radius: 0.5rem;
+    background-color:linear-gradient(#003b5b,#4a7abc);    
+    border-top: 2px solid transparent;
+  }
+
+  #mobile-nav ul {
+    display:flex;
+    flex-direction: column;
+  }
+  
+  #mobile-nav a {
+    text-decoration: none;
+    color: var(--bg-white);
+  }
+  
+  #mobile-nav:popover-open {
+    display: flex;
+    padding: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    
+    #btn-menu {
+      display: flex;
+    }
+
+    header .nav_link{
+        display: none;
+    }
+
+    header {
+        position:relative;
+        width:100%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #hero h1 {
+        justify-content: center;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .section-about{
+        flex-direction: column;
+    }
+
+    .cards{
+        flex-direction: column;
+    }
+
+    .cards-beneficio {
+        width: 90%;
+    }
+
+    .contac {
+        flex-direction: column;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+  }
+
+
+/*Main*/
+
+main {
+    margin-top: 16vh;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    max-width:90%;
+    width: 90%;
+    padding: 1rem;
+    border-color: #000;
+    border: 5px;
+    border-style: solid;
+    border-radius: 15px;
+    margin-left: 5%;
+    background: linear-gradient(#003b5b,#4a7abc);
+  }
+ 
+/*Hero*/
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--main_color);
+    width: 50%;
+  }
+  
+  #hero h1 {
+    background: var(--hero_color);
+    background-clip: text;
+    text-align: left;
+    font-size: 3.5rem;
+  }
+    
+
+#hero a {
+    background-color: var(--hero_color);
+    color: rgb(224, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 2px solid #192124;
+    width: fit-content;
+    padding: .5rem 1rem;
+    border-radius: 0.25rem;
+    display:inline;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+  }
+
+  #card {
+    flex-direction: column;
+    align-items: center;
+    padding:1rem;
+    border-radius: 25rem;
+  }
+
+  #card picture:hover {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transform: scale(1.2);
+  }
+
+.imagencard {
+    width: 500px;
+    height: 500px;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row ;
+    justify-content:space-around;
+
+}
+
+.fila a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.fila button:hover {
+    border-radius: 20%;
+    background-color:#2193b0;
+    padding: 5rem;
+    transform: scale(1.1);   
+}
+
+/*about*/
+
+.section-about {
+    margin-top: 10vh;
+    display: flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    max-width:90%;
+    width: 90%;
+    padding: 1rem;
+    border-color: #cccecc;
+    border: 5px;
+    border-style: solid;
+    border-radius: 15px;
+    margin-left: 5%;
+    background: linear-gradient(#003b5b,#4a7abc);
+}
+
+.about-descripcion {
+    background: linear-gradient(#0f3d58,#1a96e9); /*  linear-gradient(#db5d27,#f83909); */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem;
+    align-content: center;
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: #60a3bd;
+}
+
+.cards {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2 ren;;
+    display: flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    max-width:90%;
+    width: 90%;
+    padding: 1rem;
+    border-color: #000;
+    border: 5px;
+    border-style: solid;
+    border-radius: 15px;
+    background: linear-gradient(#0f3d58,#1a96e9);;
+    margin-left: 5%;
+}
+
+.cards-beneficio {
+    background:linear-gradient(#0f3d58,#1a96e9);
+    color: whitesmoke;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;   
+    padding: 1rem;
+    margin: 2rem;
+    align-content: center;
+    border: 5px solid;
+    box-shadow: #3f8adf;
+    border-radius: 20px;
+    border-color: #899ca8;
+    width: calc(33.33% - 2rem); /* Ajusta según la cantidad de tarjetas */
+    text-align: center;
+}
+
+.cards-beneficio img {
+    width: 70px;
+    height: 70px;
+    align-items: center; 
+}
+
+.contact {
+    background: linear-gradient(#0f3d58,#1a96e9);
+    color: whitesmoke; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;   
+    padding: 1rem;
+    margin: 2rem;
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: #0d0e0d;
+    max-width:90%;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.contact-datos {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 100%;
+}
+
+.contact-info {
+    gap: 2rem;   
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.contact-info ul li {
+    gap: 1rem;   
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-redes{
+    gap: 2rem;   
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.contact-redes ul li {
+    gap: 1rem;   
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-img {
+    gap: 2rem;   
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.contact-logo {
+    width: 50px;
+    height: 50px;
+}
+
+#img-it {
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    max-width:90%;
+    width: 90%;
+    margin-left: 5%; 
+}
